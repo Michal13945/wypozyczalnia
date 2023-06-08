@@ -6,7 +6,29 @@
         xmlns:local="clr-namespace:wypozyczalnia.Windows"
         mc:Ignorable="d"
         Title="ClientInfoWindow" Height="450" Width="800">
-    <Grid>
-        
+    <Grid Margin="0,0,-21,-16">
+        <Label x:Name="ClientInfoLabel" Content="Wypełnij dane wypożyczenia" HorizontalAlignment="Left" Margin="186,10,0,0" VerticalAlignment="Top" FontSize="30px"/>
+        <Label x:Name="firstnameLabel" Content="Imię: " HorizontalAlignment="Left" Margin="115,79,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="firstnameBox" HorizontalAlignment="Left" Margin="196,83,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="lastnameLabel" Content="Nazwisko: " HorizontalAlignment="Left" Margin="432,79,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="lastnameBox" HorizontalAlignment="Left" Margin="503,83,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <DatePicker x:Name="startDatePicker" Text="=Wybierz datę" HorizontalAlignment="Left" Margin="124,315,0,0" VerticalAlignment="Top" Width="191" />
+        <Label x:Name="startLabel" Content="Początek wynajmu" HorizontalAlignment="Left" Margin="124,284,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="endLabel" Content="Koniec wynajmu" HorizontalAlignment="Left" Margin="433,284,0,0" VerticalAlignment="Top"/>
+        <DatePicker x:Name="endDatePicker" HorizontalAlignment="Left" Margin="432,315,0,0" VerticalAlignment="Top" Width="192" Text="Wybierz datę" />
+        <Label x:Name="phoneNumberLabel" Content="Nr telefonu: " HorizontalAlignment="Left" Margin="115,116,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="phoneNumberBox" HorizontalAlignment="Left" Margin="196,120,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" />
+        <Label x:Name="streetLabel" Content="Ulica: " HorizontalAlignment="Left" Margin="115,188,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="streetBox" HorizontalAlignment="Left" Margin="196,192,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" />
+        <Label x:Name="cityLabel" Content="Miasto: " HorizontalAlignment="Left" Margin="432,188,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="cityBox" HorizontalAlignment="Left" Margin="503,192,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="countryLabel" Content="Kraj: " HorizontalAlignment="Left" Margin="115,223,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="countryBox" HorizontalAlignment="Left" Margin="196,231,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" />
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="1" Margin="93,167,0,0" VerticalAlignment="Top" Width="546"/>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="1" Margin="93,277,0,0" VerticalAlignment="Top" Width="546"/>
+        <Button x:Name="rentButton" Content="Wynajmij samochód" HorizontalAlignment="Left" Margin="648,365,0,0" VerticalAlignment="Top"  Padding="5,5,5,5" ScrollViewer.CanContentScroll="True"/>
+        <Label Content="Proponowana cena:" HorizontalAlignment="Left" Margin="362,367,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="peselLabel" Content="Nr PESEL: " HorizontalAlignment="Left" Margin="422,116,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="peselBox" HorizontalAlignment="Left" Margin="503,120,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
     </Grid>
 </Window>
