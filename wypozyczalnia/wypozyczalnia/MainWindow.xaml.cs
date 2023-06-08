@@ -14,6 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using wypozyczalnia.Models;
+using wypozyczalnia.Windows;
 
 namespace wypozyczalnia;
 
@@ -43,6 +44,9 @@ public partial class MainWindow : Window
    
     private void NextButton_Click(object sender, RoutedEventArgs e)
     {
+        ClientInfoWindow clientInfoWindow = new ClientInfoWindow();
+        clientInfoWindow.Show();
 
+        this.Hide();
     }
 }
