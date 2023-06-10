@@ -16,4 +16,6 @@ public class User
     public string? Street { get; set; }
     public string? City { get; set; }
     public string? Country { get; set; }
+
+    public virtual IEnumerable<RentedCar> RentedCars { get; set; }
 }
