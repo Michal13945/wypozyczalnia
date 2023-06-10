@@ -1,0 +1,12 @@
+﻿<Window x:Class="wypozyczalnia.Windows.ConfirmationWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:wypozyczalnia.Windows"
+        mc:Ignorable="d"
+        Title="ConfirmationWindow" Height="450" Width="800">
+    <Grid>
+        <Label HorizontalAlignment="Left" VerticalAlignment="Center"  Content="Potwierdzenie zostło wysłane  &#xA;&#x9;&#x9;na adres email" FontFamily="Goudy Stout" Width="664" Height="92" FontSize="18" Margin="87,0,0,0"/>
+    </Grid>
+</Window>

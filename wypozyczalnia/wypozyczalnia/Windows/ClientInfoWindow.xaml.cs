@@ -28,7 +28,11 @@ namespace wypozyczalnia.Windows
         }
         private void rentButton_Click(object sender, RoutedEventArgs e)
         {
+            ConfirmationWindow confirmationWindow = new ConfirmationWindow();
 
+            confirmationWindow.Show();
+
+            this.Hide();
         }
 
         private void firstnameBox_TextChanged(object sender, TextChangedEventArgs e)
