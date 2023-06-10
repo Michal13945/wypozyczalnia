@@ -28,9 +28,7 @@ public partial class MainWindow : Window
     public MainWindow()
     {
         Cars = new ObservableCollection<Car>() {
-            new Car() {Id = 1, Model = "207", Brand = "Peugeot", Year = 2015},
-            new Car() {Id = 1, Model = "206", Brand = "Peugeot", Year = 2018},
-            new Car() {Id = 1, Model = "Octavia", Brand = "Skoda", Year = 2012},
+           
         };
 
         InitializeComponent();
