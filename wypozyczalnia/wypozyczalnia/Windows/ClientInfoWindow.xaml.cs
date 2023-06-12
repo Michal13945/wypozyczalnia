@@ -172,6 +172,24 @@ namespace wypozyczalnia.Windows
             RentedCar.UserId = user.Id;
 
             DbData.AddRentedCar(RentedCar);
+           
+            //var smtpClient = new SmtpClient("smtp.gmail.com")
+            //{
+            //    Port = 587,
+            //    Credentials = new NetworkCredential("username", "password"),
+            //    EnableSsl = true,
+            //};
+
+            //var mailMessage = new MailMessage
+            //{
+            //    From = new MailAddress("email"),
+            //    Subject = "Wynajęcie samochodu",
+            //    Body = $"<h1>Hello</h1> <h3>Wynająłeś samochod {SelectedCar} od {RentedCar.StartDate} do {RentedCar.EndDate} w cenie {RentedCar.Price}.</h3>",
+            //    IsBodyHtml = true,
+            //};
+            //mailMessage.To.Add("recipient");
+
+            //smtpClient.Send(mailMessage);
 
             ConfirmationWindow confirmationWindow = new ConfirmationWindow();
 
