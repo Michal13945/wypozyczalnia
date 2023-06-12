@@ -6,7 +6,10 @@
         xmlns:local="clr-namespace:wypozyczalnia.Windows"
         mc:Ignorable="d"
         Title="ConfirmationWindow" Height="450" Width="800">
+    <Window.Background>
+        <ImageBrush ImageSource="/Windows/background.jpg"/>
+    </Window.Background>
     <Grid>
-        <Label HorizontalAlignment="Left" VerticalAlignment="Center"  Content="Potwierdzenie zostło wysłane  &#xA;&#x9;&#x9;na adres email" FontFamily="Goudy Stout" Width="664" Height="92" FontSize="18" Margin="87,0,0,0"/>
+        <Label HorizontalAlignment="Left" VerticalAlignment="Top"  Content="Potwierdzenie zostło wysłane  &#xA;&#x9;&#x9;na adres email" FontFamily="Goudy Stout" Width="664" Height="92" FontSize="18" Margin="111,125,0,0"/>
     </Grid>
 </Window>

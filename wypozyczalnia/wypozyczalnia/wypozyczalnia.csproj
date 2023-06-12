@@ -6,6 +6,12 @@
     <Nullable>enable</Nullable>
     <UseWPF>true</UseWPF>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="background.jpg" />
+    <None Remove="Windows\background.jpg" />
+    <None Remove="Windows\background2.jpg" />
+  </ItemGroup>
 	
 	<ItemGroup>
 		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.16" />
@@ -19,5 +25,15 @@
 			<PrivateAssets>all</PrivateAssets>
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 		</PackageReference>
+	</ItemGroup>
+	
+	<ItemGroup>
+	  <Folder Include="Resources\" />
+	</ItemGroup>
+	
+	<ItemGroup>
+	  <Resource Include="background.jpg" />
+	  <Resource Include="Windows\background.jpg" />
+	  <Resource Include="Windows\background2.jpg" />
 	</ItemGroup>
 </Project>

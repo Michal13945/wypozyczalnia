@@ -6,9 +6,12 @@
         xmlns:local="clr-namespace:wypozyczalnia"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
+    <Window.Background>
+        <ImageBrush ImageSource="/background.jpg"/>
+    </Window.Background>
     <Grid>
         <Label x:Name="RentTitle" Content="Wypozycz samochód" HorizontalAlignment="Center" Margin="0,31,0,0" VerticalAlignment="Top" IsEnabled="False" FontSize="25px" Foreground="Black" FontFamily="Goudy Stout"/>
-        <ComboBox x:Name="CarsSelect" ItemsSource="{Binding Cars}" HorizontalAlignment="Left" Margin="107,150,0,0" VerticalAlignment="Top" Width="272"  SelectionChanged="CarsSelect_SelectionChanged" Height="26">
+        <ComboBox x:Name="CarsSelect" HorizontalAlignment="Left" Margin="107,150,0,0" VerticalAlignment="Top" Width="272" ItemsSource="{Binding Cars}"  SelectionChanged="CarsSelect_SelectionChanged" Height="26">
             <ComboBox.Background>
                 <LinearGradientBrush EndPoint="0,1">
                     <GradientStop Color="#FFF0F0F0"/>
@@ -16,10 +19,10 @@
                 </LinearGradientBrush>
             </ComboBox.Background>
         </ComboBox>
-        <Button x:Name="NextButton" Content="Dalej" HorizontalAlignment="Left" Margin="652,373,0,0" VerticalAlignment="Top" Width="95" Click="NextButton_Click" Height="32" Background="#FFC4D3D6"/>
+        <Button x:Name="NextButton" Content="Dalej" HorizontalAlignment="Left" Margin="652,373,0,0" VerticalAlignment="Top" IsEnabled="{Binding IsNextButtonEnabled}" Width="95" Click="NextButton_Click" Height="32" Background="#FFC4D3D6"/>
         <Label Content="Wybierz oferte:" HorizontalAlignment="Left" Margin="107,119,0,0" VerticalAlignment="Top" FontFamily="Goudy Stout"/>
-        <Label  Content="Cena za dobę:" HorizontalAlignment="Left" Margin="55,270,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="ValuePerDay" HorizontalAlignment="Left" Margin="145,274,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsEnabled="False" >
+        <Label Visibility="{Binding PriceVisibility}" Content="Cena za dobę:" HorizontalAlignment="Left" Margin="55,270,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="ValuePerDay" HorizontalAlignment="Left" Margin="145,274,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsEnabled="False" Text="{Binding PricePerDay}" Visibility="{Binding PriceVisibility}">
             <TextBox.Background>
                 <ImageBrush/>
             </TextBox.Background>
