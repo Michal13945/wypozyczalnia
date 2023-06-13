@@ -10,8 +10,27 @@
         <ImageBrush ImageSource="/background.jpg"/>
     </Window.Background>
     <Grid>
-        <Label x:Name="RentTitle" Content="Wypozycz samochód" HorizontalAlignment="Center" Margin="0,31,0,0" VerticalAlignment="Top" IsEnabled="False" FontSize="25px" Foreground="Black" FontFamily="Goudy Stout"/>
-        <ComboBox x:Name="CarsSelect" HorizontalAlignment="Left" Margin="107,150,0,0" VerticalAlignment="Top" Width="272" ItemsSource="{Binding Cars}"  SelectionChanged="CarsSelect_SelectionChanged" Height="26">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="2*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <Label Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="3" x:Name="RentTitle" Content="Wypozycz samochód" HorizontalAlignment="Center" VerticalAlignment="Center" IsEnabled="False" FontSize="25px" Foreground="Black" FontFamily="Goudy Stout"/>
+        <Label Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3" Content="Wybierz oferte:" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Goudy Stout"/>
+        <ComboBox Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3" x:Name="CarsSelect" ItemsSource="{Binding Cars}"  SelectionChanged="CarsSelect_SelectionChanged">
             <ComboBox.Background>
                 <LinearGradientBrush EndPoint="0,1">
                     <GradientStop Color="#FFF0F0F0"/>
@@ -19,13 +38,12 @@
                 </LinearGradientBrush>
             </ComboBox.Background>
         </ComboBox>
-        <Button x:Name="NextButton" Content="Dalej" HorizontalAlignment="Left" Margin="652,373,0,0" VerticalAlignment="Top" IsEnabled="{Binding IsNextButtonEnabled}" Width="95" Click="NextButton_Click" Height="32" Background="#FFC4D3D6"/>
-        <Label Content="Wybierz oferte:" HorizontalAlignment="Left" Margin="107,119,0,0" VerticalAlignment="Top" FontFamily="Goudy Stout"/>
-        <Label Visibility="{Binding PriceVisibility}" Content="Cena za dobę:" HorizontalAlignment="Left" Margin="55,270,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="ValuePerDay" HorizontalAlignment="Left" Margin="145,274,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsEnabled="False" Text="{Binding PricePerDay}" Visibility="{Binding PriceVisibility}">
+        <Label Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="2" Content="Cena za dobę:" HorizontalAlignment="Left" VerticalAlignment="Center" Visibility="{Binding PriceVisibility}"/>
+        <TextBox Grid.Row="7" Grid.Column="1" x:Name="ValuePerDay" TextWrapping="Wrap" VerticalAlignment="Center" IsEnabled="False" Text="{Binding PricePerDay}" Visibility="{Binding PriceVisibility}">
             <TextBox.Background>
                 <ImageBrush/>
             </TextBox.Background>
         </TextBox>
+        <Button Grid.Row="8" Grid.Column="3" x:Name="NextButton" Content="Dalej" HorizontalAlignment="Left" VerticalAlignment="Center" Background="#FFC4D3D6" Grid.ColumnSpan="2" Margin="114,0,0,0" Width="115" Height="34" IsEnabled="{Binding IsNextButtonEnabled}" Click="NextButton_Click"/>
     </Grid>
 </Window>

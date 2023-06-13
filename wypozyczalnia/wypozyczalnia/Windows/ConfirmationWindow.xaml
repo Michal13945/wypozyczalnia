@@ -10,6 +10,15 @@
         <ImageBrush ImageSource="/Windows/background.jpg"/>
     </Window.Background>
     <Grid>
-        <Label HorizontalAlignment="Left" VerticalAlignment="Top"  Content="Potwierdzenie zostło wysłane  &#xA;&#x9;&#x9;na adres email" FontFamily="Goudy Stout" Width="664" Height="92" FontSize="18" Margin="111,125,0,0"/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Label Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Left" VerticalAlignment="Top"  Content="Potwierdzenie zostało wysłane  &#xA;&#x9;&#x9;na adres email" FontFamily="Goudy Stout" FontSize="18" Margin="78,132,0,0" Grid.RowSpan="2"/>
     </Grid>
 </Window>
